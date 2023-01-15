@@ -45,6 +45,20 @@
           </div>
         </div>
       </div>
+
     </div>
+	<script>
+window.addEventListener("load", setAttributePrice);
+
+function setAttributePrice() {
+var products = document.getElementsByClassName("product");
+
+for (var i = 0; i < products.length; i++) {
+   var price = products[i].getElementsByClassName("price")[0].innerHTML;
+   products[i].setAttribute("data-price", price);
+}
+
+}
+</script>
   </body>
 </html>
